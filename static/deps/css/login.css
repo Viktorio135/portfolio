@@ -1,0 +1,34 @@
+.div-login {
+    margin: 50px auto;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-login {
+    margin-bottom: 10px;
+}
+
+.input-login {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.button-login {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-login:hover {
+    background-color: #0056b3;
+}

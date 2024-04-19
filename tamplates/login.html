@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/login.css" %}">
+</head>
+<body>
+    <div class='div-login'> 
+        <form class='form-login' action="{% url "login:login" %}" method="post">
+            {% csrf_token %}
+            <label class='label-login' for="id_username">Username:</label>
+            <input type='text' class='input-login' id='id_username' name='username' placeholder='Введите ваш логин' required
+            value='{% if form.username.value %}{{ form.username.value }}{% endif %}'></input>
+            
+            <label class='label-login' for="id_password">Password:</label>
+            <input type='password' class='input-login' id='id_password' name='password' placeholder='Введите ваш пароль' required></input>
+            <button class='button-login' type="submit">Entry</button>
+        </form>
+        
+    </div>
+</body>
+</html>
